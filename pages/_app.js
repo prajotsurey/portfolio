@@ -1,7 +1,41 @@
-import "../styles/tailwind.css";
+import React from 'react'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import Head from 'next/head'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+`
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
 }
 
-export default MyApp;
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+        </Head>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  )
+}

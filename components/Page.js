@@ -1,14 +1,14 @@
-import DynamicComponent from "./DynamicComponent";
-import { sbEditable } from "@storyblok/storyblok-editable";
-
+import React from 'react'
+import DynamicComponent from './DynamicComponent'
+ 
 const Page = ({ blok }) => (
-  <main {...sbEditable(blok)} key={blok._uid}>
+  <main>
     {blok.body
       ? blok.body.map((blok) => (
-          <DynamicComponent blok={blok} key={blok._uid} />
-        ))
+        <DynamicComponent blok={blok} key={blok._uid} />
+      ))
       : null}
   </main>
-);
-
-export default Page;
+)
+ 
+export default Page

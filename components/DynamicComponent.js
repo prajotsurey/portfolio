@@ -1,30 +1,28 @@
-import Teaser from "./Teaser";
-import Feature from "./Feature";
-import FeaturedPosts from "./FeaturedPosts";
-import Grid from "./Grid";
-import Placeholder from "./Placeholder";
-import PostsList from "./PostsList";
-import Page from "./Page";
-import BlogPost from "./BlogPost";
-import Text from "./Text";
+import React from 'react'
+import HeroLandingSection from './HeroLandingSection'
+import Page from './Page'
 
+
+// resolve Storyblok components to Next.js components
 const Components = {
-  teaser: Teaser,
-  grid: Grid,
-  feature: Feature,
-  "featured-posts": FeaturedPosts,
-  page: Page,
-  post: BlogPost,
-  text: Text,
-  "selected-posts": PostsList,
-};
-
+  page:Page,
+  HeroLandingSection: HeroLandingSection,
+}
+ 
 const DynamicComponent = ({ blok }) => {
-  if (typeof Components[blok.component] !== "undefined") {
-    const Component = Components[blok.component];
-    return <Component blok={blok} />;
+  // check if component is defined above
+  if (typeof Components[blok.component] !== 'undefined') {
+    const Component = Components[blok.component]
+ 
+    return <Component blok={blok} key={blok._uid} />
   }
-  return <Placeholder componentName={blok.component} />;
-};
-
-export default DynamicComponent;
+ 
+  // fallback if the component doesn't exist
+  return (
+    <p>
+      The component <strong>{blok.component}</strong> has not been created yet.
+    </p>
+  )
+}
+ 
+export default DynamicComponent 
