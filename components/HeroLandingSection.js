@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const HeroContainer = styled.section`
   width: 90%;
-  max-width: 1600px;
-  height: 100vh;
+  max-width: 1500px;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: row;
   align-items:center;
@@ -13,11 +13,12 @@ const HeroContainer = styled.section`
   margin-right: auto;
 `
 
-const WelcomeText = styled.div`
+const WelcomeText = styled.h1`
   font-size: 4rem;
   max-width: 20ch;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
+  margin-top: -140px;
 `
 
 
