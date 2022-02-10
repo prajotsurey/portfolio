@@ -29,9 +29,15 @@ const NavLink = styled.a`
   margin-left: 0px;
   font-size: 1.4rem;
   font-weight: 300;
-
+  text-decoration: none;
+  color:white;
+  
   @media(min-width:600px) {
     margin-left: 3rem;
+  }
+
+  &:hover{
+    text-decoration: underline;
   }
 `
 
@@ -40,9 +46,9 @@ const Header = () => {
   return(
     <HeaderContainer>
       <Nav>
-        <NavLink>Projects</NavLink>
-        <NavLink>About</NavLink>
-        <NavLink>Contact</NavLink>
+        <NavLink href="#projects">Projects</NavLink>
+        <NavLink href="#about">About</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
       </Nav>
     </HeaderContainer>
   )

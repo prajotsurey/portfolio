@@ -41,7 +41,7 @@ const ContactSection = ({blok}) => {
   return(
     <AlternateColorSectionContainer>
       <SectionContainer >
-        <SectionHeading>
+        <SectionHeading id="contact">
           {blok.heading}
         </SectionHeading>
         <SubHeading className='fade-in'>

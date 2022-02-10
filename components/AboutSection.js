@@ -20,7 +20,7 @@ const AboutSection = ({blok}) => {
   
   return(
     <SectionContainer>
-      <SectionHeading>
+      <SectionHeading id="about">
         {blok.heading}
       </SectionHeading>
       <SubHeading className='fade-in'>

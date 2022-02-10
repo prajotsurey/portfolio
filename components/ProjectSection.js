@@ -92,7 +92,7 @@ const ProjectSection = ({blok}) => {
   return(
     <AlternateColorSectionContainer ref={sectionRef}>
       <SectionContainer>
-        <SectionHeading>
+        <SectionHeading id="projects">
           {blok.heading}
         </SectionHeading>
         <ProjectsContainer>
