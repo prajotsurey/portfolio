@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { SectionContainer, SectionHeading } from './styledComponents'
 import Storyblok from '../lib/storyblok'
 import { AlternateColorSectionContainer } from './styledComponents'
-import DynamicComponent from './DynamicComponent'
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -26,10 +25,22 @@ const ProjectContainer = styled.div`
   max-width: 500px;
   justify-self: center;
 `
+const ProjectLink = styled.a`
+  display:block;
+  width:100%;
+  overflow: hidden;
+
+`
+
 
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
+  transition: transform 100ms ease-in;
+
+  ${ProjectLink}:hover &{
+    transform: scale(1.02);
+  }
 `
 
 const ProjectTitle = styled.h3`
@@ -62,7 +73,6 @@ const ProjectSection = ({blok}) => {
     }
 
     const projects = sectionRef.current.querySelectorAll('.fade-in')
-    console.log(projects)
     const projectObserver = new IntersectionObserver(function(entries,observer) {
       entries.forEach(entry => {
         console.log(entry.target.isIntersecting)
@@ -88,9 +98,9 @@ const ProjectSection = ({blok}) => {
         <ProjectsContainer>
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>
-              <div>
+              <ProjectLink>
                 <ProjectImage src={project.content.introImage.filename} />
-              </div>
+              </ProjectLink>
               <ProjectTitle>
                 {project.content.title}          
               </ProjectTitle>
