@@ -38,7 +38,7 @@ const ProjectTitle = styled.h3`
 `
 
 const ProjectIntro = styled.div`
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Merriweather sans', sans-serif;
   font-weight: 300;
   line-height: 1.5rem;

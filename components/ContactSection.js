@@ -22,7 +22,7 @@ const BoldEmail = styled.a`
 
 
 const ContactLinkContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 5rem;
 `
 
 const ContactLink = styled.a`
