@@ -30,6 +30,7 @@ const ContactLink = styled.a`
   font-size: 1.2rem;
   color: grey;
   text-decoration:none;
+  font-weight: 500;
 
   &:hover{
     text-decoration: underline;
