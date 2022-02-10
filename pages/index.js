@@ -3,12 +3,14 @@ import React from 'react'
 // The Storyblok Client
 import Storyblok from '../lib/storyblok'
 import DynamicComponent from '../components/DynamicComponent'
+import Header from '../components/Header'
  
 export default function Home(props) {
   const story = props.story
  
   return (
     <div>
+      <Header />
       <DynamicComponent blok={story.content} />
     </div>
   )
