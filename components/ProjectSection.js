@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { SectionContainer, SectionHeading } from './styledComponents'
 import Storyblok from '../lib/storyblok'
+import { AlternateColorSectionContainer } from './styledComponents'
+import DynamicComponent from './DynamicComponent'
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -43,6 +45,7 @@ const ProjectIntro = styled.div`
   margin-bottom: 3rem;
 `
 
+
 const ProjectSection = ({blok}) => {
   const [projects, setProjects] = useState([])
   
@@ -51,30 +54,32 @@ const ProjectSection = ({blok}) => {
       'starts_with': 'projects/'
     })  
     setProjects(response.data.stories)
+
   },[])
   
-
   return(
-    <SectionContainer>
-      <SectionHeading>
-        {blok.heading}
-      </SectionHeading>
-      <ProjectsContainer>
-        {projects.map(project => (
-          <ProjectContainer key={project.content._uid}>
-            <div>
-              <ProjectImage src={project.content.introImage.filename} />
-            </div>
-            <ProjectTitle>
-              {project.content.title}          
-            </ProjectTitle>
-            <ProjectIntro>
-              {project.content.intro}
-            </ProjectIntro>
-          </ProjectContainer>
-        ))}
-      </ProjectsContainer>
-    </SectionContainer>
+    <AlternateColorSectionContainer>
+      <SectionContainer>
+        <SectionHeading>
+          {blok.heading}
+        </SectionHeading>
+        <ProjectsContainer>
+          {projects.map(project => (
+            <ProjectContainer key={project.content._uid}>
+              <div>
+                <ProjectImage src={project.content.introImage.filename} />
+              </div>
+              <ProjectTitle>
+                {project.content.title}          
+              </ProjectTitle>
+              <ProjectIntro>
+                {project.content.intro}
+              </ProjectIntro>
+            </ProjectContainer>
+          ))}
+        </ProjectsContainer>
+      </SectionContainer>
+    </AlternateColorSectionContainer>
   )
 } 
 

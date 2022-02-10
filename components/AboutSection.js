@@ -12,6 +12,7 @@ const AboutText = styled.div`
   font-weight: 300;
   line-height: 1.5rem;
   font-size: 1.1rem;
+  margin-bottom: 10rem;
 `
 
 

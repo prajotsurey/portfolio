@@ -13,6 +13,11 @@ export const SectionContainer = styled.section`
 export const SectionHeading = styled.h2`
   font-weight: 200;
   font-size: 2.5rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-bottom: 8rem;
+`
+
+export const AlternateColorSectionContainer = styled.div`
+  background: #fbfbfb;
+  color:black;
 `

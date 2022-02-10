@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React from 'react'
 // The Storyblok Client
 import Storyblok from '../lib/storyblok'
@@ -7,7 +6,6 @@ import Header from '../components/Header'
  
 export default function Home(props) {
   const story = props.story
- 
   return (
     <div>
       <Header />
