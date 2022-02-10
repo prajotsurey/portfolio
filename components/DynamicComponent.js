@@ -1,12 +1,14 @@
 import React from 'react'
 import HeroLandingSection from './HeroLandingSection'
 import Page from './Page'
+import ProjectSection from './ProjectSection'
 
 
 // resolve Storyblok components to Next.js components
 const Components = {
   page:Page,
   HeroLandingSection: HeroLandingSection,
+  ProjectSection: ProjectSection,
 }
  
 const DynamicComponent = ({ blok }) => {
