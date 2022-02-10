@@ -1,4 +1,5 @@
 import React from 'react'
+import AboutSection from './AboutSection'
 import HeroLandingSection from './HeroLandingSection'
 import Page from './Page'
 import ProjectSection from './ProjectSection'
@@ -9,6 +10,7 @@ const Components = {
   page:Page,
   HeroLandingSection: HeroLandingSection,
   ProjectSection: ProjectSection,
+  AboutSection: AboutSection
 }
  
 const DynamicComponent = ({ blok }) => {
