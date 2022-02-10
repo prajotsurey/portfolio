@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { SectionContainer, SectionHeading } from './styledComponents'
 import Storyblok from '../lib/storyblok'
@@ -48,24 +48,46 @@ const ProjectIntro = styled.div`
 
 const ProjectSection = ({blok}) => {
   const [projects, setProjects] = useState([])
-  
+  const sectionRef = useRef(null)
   useEffect(async () => {
     const response = await Storyblok.get('cdn/stories/', {
       'starts_with': 'projects/'
     })  
     setProjects(response.data.stories)
 
+    const options = {
+      root:null,
+      threshold: 0,
+      rootMargin: '0px'
+    }
+
+    const projects = sectionRef.current.querySelectorAll('.fade-in')
+    console.log(projects)
+    const projectObserver = new IntersectionObserver(function(entries,observer) {
+      entries.forEach(entry => {
+        console.log(entry.target.isIntersecting)
+        if(entry.isIntersecting) {
+          entry.target.classList.add('appear')
+          observer.unobserve(entry.target)
+        }
+      })
+    },options)
+
+
+    projects.forEach(project => {
+      projectObserver.observe(project)
+    })
   },[])
   
   return(
-    <AlternateColorSectionContainer>
+    <AlternateColorSectionContainer ref={sectionRef}>
       <SectionContainer>
         <SectionHeading>
           {blok.heading}
         </SectionHeading>
         <ProjectsContainer>
           {projects.map(project => (
-            <ProjectContainer key={project.content._uid}>
+            <ProjectContainer className='fade-in' key={project.content._uid}>
               <div>
                 <ProjectImage src={project.content.introImage.filename} />
               </div>

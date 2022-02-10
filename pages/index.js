@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // The Storyblok Client
 import Storyblok from '../lib/storyblok'
 import DynamicComponent from '../components/DynamicComponent'
@@ -6,6 +6,26 @@ import Header from '../components/Header'
  
 export default function Home(props) {
   const story = props.story
+  const options = {
+    root:null,
+    threshold: 0,
+    rootMargin: '0px'
+  }
+
+  useEffect(() => {
+    const fades = document.querySelectorAll('.fade-in')
+    const observer = new IntersectionObserver(function(entries,observer) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('appear')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, options)
+    
+    fades.forEach(fade => observer.observe(fade))
+  },[])
+
   return (
     <div>
       <Header />

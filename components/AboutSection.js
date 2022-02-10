@@ -23,10 +23,10 @@ const AboutSection = ({blok}) => {
       <SectionHeading>
         {blok.heading}
       </SectionHeading>
-      <SubHeading>
+      <SubHeading className='fade-in'>
         {blok.subHeading}
       </SubHeading>
-      <AboutText>
+      <AboutText className='fade-in'>
         {blok.text}
         <br/>
         <br/>

@@ -40,17 +40,17 @@ const ContactLink = styled.a`
 const ContactSection = ({blok}) => {
   return(
     <AlternateColorSectionContainer>
-      <SectionContainer>
+      <SectionContainer >
         <SectionHeading>
           {blok.heading}
         </SectionHeading>
-        <SubHeading>
+        <SubHeading className='fade-in'>
           {blok.question}
         </SubHeading>
-        <EmailText>
+        <EmailText className='fade-in'>
         send me an email at <BoldEmail href={`mailto:${blok.email.email}`} target="_blank">{blok.email.email}</BoldEmail>
         </EmailText>
-        <ContactLinkContainer>
+        <ContactLinkContainer className='fade-in'>
           {blok.links.map(link => (
             <ContactLink key={link._uid} href={link.url} target="_blank">
               {link.displayText}

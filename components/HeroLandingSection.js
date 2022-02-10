@@ -25,7 +25,7 @@ const WelcomeText = styled.h1`
 const HeroLandingSection = ({blok}) => {
   return(
     <HeroContainer>
-      <WelcomeText>
+      <WelcomeText className='fade-in'>
         {blok.welcomeText}
       </WelcomeText>
     </HeroContainer>

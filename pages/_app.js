@@ -23,6 +23,17 @@ const GlobalStyle = createGlobalStyle`
     background:#111111;
   }
 
+  .fade-in{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+  }
+
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
 `
 
 const theme = {
