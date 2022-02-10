@@ -19,7 +19,9 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   width:100%;
-  `
+  max-width: 500px;
+  justify-self: center;
+`
 
 const ProjectImage = styled.img`
   width: 100%;
@@ -36,6 +38,7 @@ const ProjectIntro = styled.div`
   font-family: 'Merriweather sans', sans-serif;
   font-weight: 300;
   line-height: 1.5rem;
+  margin-bottom: 3rem;
 `
 
 const ProjectSection = ({blok}) => {
