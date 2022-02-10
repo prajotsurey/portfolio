@@ -52,7 +52,7 @@ const ContactSection = ({blok}) => {
         </EmailText>
         <ContactLinkContainer className='fade-in'>
           {blok.links.map(link => (
-            <ContactLink key={link._uid} href={link.url} target="_blank">
+            <ContactLink key={link._uid} href={link.url.url} target="_blank">
               {link.displayText}
             </ContactLink>
           ))}
