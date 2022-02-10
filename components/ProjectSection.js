@@ -13,6 +13,8 @@ const ProjectsContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
+  margin-bottom: 8rem;
+
 `
 
 const ProjectContainer = styled.div`
