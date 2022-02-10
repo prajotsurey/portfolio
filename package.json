@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "eslint": "^8.8.0",
+    "eslint-plugin-react": "^7.28.0",
     "postcss": "^8.3.6",
     "postcss-preset-env": "^6.7.0",
     "storyblok-rich-text-react-renderer": "^2.3.1",
