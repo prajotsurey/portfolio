@@ -10,12 +10,19 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     min-width: 100%;
     font-family: 'Roboto', sans-serif;
+    color:white;
+    background:#111111;
   }
 
   html {
     min-height: 100%;
     min-width: 100%;
   }
+
+  main{
+    background:#111111;
+  }
+
 `
 
 const theme = {
