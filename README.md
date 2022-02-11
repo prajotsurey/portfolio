@@ -1,18 +1,36 @@
-## Storyblok Next.js Multi-language Blog
+# Portfolio Website built using NextJs, Styled-Components. It uses Stroyblok as the CMS.
+This project is the repository for my portfolio website.
 
-This is the example repository for building a multi-language blog with Storyblok.
+## OVERVIEW
+This repo is a fork of the example repository for building a multi-language blog with Storyblok.
 
-Follow our [The Complete Guide to Build a Full Blown Multilanguage Website with Next.js](https://www.storyblok.com/tp/next-js-react-guide) tutorial to set it up
+I decided to use a CMS because I realised it would save me a lot of time while updating the website. Instead of updating the code I can just log onto the CMS console and update it in one go. Plus CMS are are built for that very purpose.
 
-1. Clone the example space with this link: <https://app.storyblok.com/#!/build/95804>
-2. Enter your preview token in the `util/storyblok.js` file
-3. Install dependencies and start the development server `npm install && npm run dev`
-4. Add your [http://localhost:3000](http://localhost:3000) as the **default location URL** in your Storyblok space settings
+I choose Storyblok because it had extensive documentation and was very easy to get into.
 
-## Learn More
+## Contents
 
-To learn more about Next.js, take a look at the following resources:
+* [Installation](#user-content-installation)
+* [Usage](#user-content-usage)
 
-- [Add a headless CMS to Next.js in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-next-js-in-5-minutes) - Tutorial to get started with Next.js & Storyblok
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
+
+1. Clone project
+
+```bash
+git clone https://github.com/prajotsurey/portfolio.git
+```
+
+2. Install dependencies for API server.
+
+```bash
+npm install
+```
+
+## Usage
+
+1. Run as dev
+
+```bash
+npm run dev
+```
