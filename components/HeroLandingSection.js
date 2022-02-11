@@ -14,11 +14,16 @@ const HeroContainer = styled.section`
 `
 
 const WelcomeText = styled.h1`
-  font-size: 4rem;
-  max-width: 20ch;
+  width: 20ch;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
   margin-top: -140px;
+
+  font-size: calc(1.5rem + 1.5vw);
+
+  @media(min-width:1200px) {
+    font-size: 4rem;
+  }
 `
 
 
@@ -26,7 +31,8 @@ const HeroLandingSection = ({blok}) => {
   return(
     <HeroContainer>
       <WelcomeText className='fade-in'>
-        {blok.welcomeText}
+        {blok.greeting}<br/>
+        {blok.introText}
       </WelcomeText>
     </HeroContainer>
   )
