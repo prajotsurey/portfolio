@@ -14,7 +14,7 @@ const HeroContainer = styled.section`
   margin: 4rem auto;
   justify-content: flex-end;
 
-  @media(min-width:600px) {
+  @media(min-width:800px) {
     flex-direction: row;
     margin: 0px auto;
     justify-content:center;
@@ -24,7 +24,7 @@ const HeroContainer = styled.section`
 const WelcomeSection = styled.div`
   margin-top: 5rem;
   max-width: 100%;
-  @media(min-width:600px) {
+  @media(min-width:800px) {
     margin-top: -140px;
   }
 `
@@ -45,11 +45,15 @@ const WelcomeText = styled.h1`
 const WelcomeSubText = styled.div`
   margin-top: 1rem;
   max-width:50ch;
-  font-size: calc((1rem + 1vw));
+  font-size: clamp(1rem, 0.9rem + 1vw, 1.3rem);
   line-height: 1.3em;
 
+  @media(min-width:800px) {
+    margin-right: 1rem;
+  }
+
   @media(min-width:1200px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `
 
@@ -58,7 +62,7 @@ const TotoroContainer = styled.div`
   flex-direction:row;
   justify-content:center;
   width: 80%;
-  @media(min-width:600px) {
+  @media(min-width:800px) {
     margin-top: -140px;
     flex-grow:1;
   }
