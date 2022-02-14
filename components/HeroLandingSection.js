@@ -9,12 +9,15 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column-reverse;
   align-items:center;
-  justify-content:center;
   margin-left: auto;
   margin-right: auto;
-  
+  margin: 4rem auto;
+  justify-content: flex-end;
+
   @media(min-width:600px) {
     flex-direction: row;
+    margin: 0px auto;
+    justify-content:center;
   }
 `
 
@@ -24,6 +27,8 @@ const WelcomeText = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-size: calc(1.5rem + 1.5vw);
   flex-shrink:0;
+  margin-top: 5rem;
+
   @media(min-width:600px) {
     margin-top: -140px;
   }
