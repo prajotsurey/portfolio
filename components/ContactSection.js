@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionContainer, SectionHeading } from './styledComponents'
-import { AlternateColorSectionContainer } from './styledComponents'
+import { MainColorSectionContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -39,7 +39,7 @@ const ContactLink = styled.a`
 
 const ContactSection = ({blok}) => {
   return(
-    <AlternateColorSectionContainer>
+    <MainColorSectionContainer>
       <SectionContainer >
         <SectionHeading id="contact">
           {blok.heading}
@@ -58,7 +58,7 @@ const ContactSection = ({blok}) => {
           ))}
         </ContactLinkContainer>
       </SectionContainer>
-    </AlternateColorSectionContainer>
+    </MainColorSectionContainer>
   )
 } 
 

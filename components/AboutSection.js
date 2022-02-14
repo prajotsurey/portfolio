@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionContainer, SectionHeading } from './styledComponents'
+import { AlternateColorSectionContainer, SectionContainer, SectionHeading } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -26,28 +26,30 @@ const AboutText2 = styled(AboutText)`
 const AboutSection = ({blok}) => {
   
   return(
-    <SectionContainer>
-      <SectionHeading id="about">
-        {blok.heading}
-      </SectionHeading>
-      <div>
-        <SubHeading >
-          {blok.subHeading}
-        </SubHeading>
-        <AboutText className='fade-in'>
-          {blok.text}
-          <br/>
-          <br/>
-          {blok.text2}
-        </AboutText>
-        <SubHeading2 className='fade-in'>
+    <AlternateColorSectionContainer>
+      <SectionContainer>
+        <SectionHeading id="about">
+          {blok.heading}
+        </SectionHeading>
+        <div>
+          <SubHeading >
+            {blok.subHeading}
+          </SubHeading>
+          <AboutText className='fade-in'>
+            {blok.text}
+            <br/>
+            <br/>
+            {blok.text2}
+          </AboutText>
+          <SubHeading2 className='fade-in'>
           MY SKILLSET
-        </SubHeading2>
-        <AboutText2 className='fade-in'>
-          {blok.skillSet}
-        </AboutText2>
-      </div>
-    </SectionContainer>
+          </SubHeading2>
+          <AboutText2 className='fade-in'>
+            {blok.skillSet}
+          </AboutText2>
+        </div>
+      </SectionContainer>
+    </AlternateColorSectionContainer>
   )
 } 
 

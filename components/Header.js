@@ -30,7 +30,7 @@ const NavLink = styled.a`
   font-size: 1.4rem;
   font-weight: 300;
   text-decoration: none;
-  color:white;
+  color:black;
   
   @media(min-width:600px) {
     margin-left: 3rem;

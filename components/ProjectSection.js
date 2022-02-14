@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { SectionContainer, SectionHeading } from './styledComponents'
 import Storyblok from '../lib/storyblok'
-import { AlternateColorSectionContainer } from './styledComponents'
+import { MainColorSectionContainer } from './styledComponents'
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -118,7 +118,7 @@ const ProjectSection = ({blok}) => {
   console.log(projects)
 
   return(
-    <AlternateColorSectionContainer ref={sectionRef}>
+    <MainColorSectionContainer ref={sectionRef}>
       <SectionContainer>
         <SectionHeading id="projects">
           {blok.heading}
@@ -151,7 +151,7 @@ const ProjectSection = ({blok}) => {
           ))}
         </ProjectsContainer>
       </SectionContainer>
-    </AlternateColorSectionContainer>
+    </MainColorSectionContainer>
   )
 } 
 

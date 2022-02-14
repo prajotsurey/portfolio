@@ -28,7 +28,8 @@ const WelcomeText = styled.h1`
   font-size: calc(1.5rem + 1.5vw);
   flex-shrink:0;
   margin-top: 5rem;
-
+  max-width: 100%;
+  
   @media(min-width:600px) {
     margin-top: -140px;
   }

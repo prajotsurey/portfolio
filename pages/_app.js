@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     min-width: 100%;
     font-family: 'Roboto', sans-serif;
-    color:white;
-    background:#111111;
+    color:black;
+    background:#f9dd91;
   }
 
   html {
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main{
-    background:#111111;
+    background:#f9dd91;
   }
 
   .fade-in{
