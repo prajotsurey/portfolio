@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AlternateColorSectionContainer, SectionContainer, SectionHeading } from './styledComponents'
+import ChibiTotoro from './ChibiTotoro'
+import { AlternateColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer ,SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -28,9 +29,14 @@ const AboutSection = ({blok}) => {
   return(
     <AlternateColorSectionContainer>
       <SectionContainer>
-        <SectionHeading id="about">
-          {blok.heading}
-        </SectionHeading>
+        <SectionHeadingContainer>
+          <SectionHeading id="about">
+            {blok.heading}
+          </SectionHeading>
+          <SectionHeadingSvgContainer>
+            <ChibiTotoro />
+          </SectionHeadingSvgContainer>
+        </SectionHeadingContainer>
         <div>
           <SubHeading >
             {blok.subHeading}
