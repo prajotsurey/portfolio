@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { SectionContainer, SectionHeading } from './styledComponents'
 import Storyblok from '../lib/storyblok'
-import { MainColorSectionContainer } from './styledComponents'
+import { MainColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
+import ChibiTotoroAlternate from './ChibiTotoroAlternate'
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -120,9 +120,14 @@ const ProjectSection = ({blok}) => {
   return(
     <MainColorSectionContainer ref={sectionRef}>
       <SectionContainer>
-        <SectionHeading id="projects">
-          {blok.heading}
-        </SectionHeading>
+        <SectionHeadingContainer>
+          <SectionHeading id="projects">
+            {blok.heading}
+          </SectionHeading>
+          <SectionHeadingSvgContainer>
+            <ChibiTotoroAlternate />
+          </SectionHeadingSvgContainer>
+        </SectionHeadingContainer>
         <ProjectsContainer>
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>

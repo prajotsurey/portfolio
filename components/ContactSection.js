@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionContainer, SectionHeading } from './styledComponents'
-import { MainColorSectionContainer } from './styledComponents'
+import ChibiTotoroAlternate from './ChibiTotoroAlternate'
+import { MainColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -41,9 +41,14 @@ const ContactSection = ({blok}) => {
   return(
     <MainColorSectionContainer>
       <SectionContainer >
-        <SectionHeading id="contact">
-          {blok.heading}
-        </SectionHeading>
+        <SectionHeadingContainer>
+          <SectionHeading id="contact">
+            {blok.heading}
+          </SectionHeading>
+          <SectionHeadingSvgContainer>
+            <ChibiTotoroAlternate />
+          </SectionHeadingSvgContainer>
+        </SectionHeadingContainer>
         <SubHeading className='fade-in'>
           {blok.question}
         </SubHeading>
