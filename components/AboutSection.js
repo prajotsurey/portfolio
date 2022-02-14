@@ -13,7 +13,7 @@ const SubHeading2 = styled(SubHeading)`
 const AboutText = styled.div`
   font-family: 'Merriweather Sans', sans-serif;
   max-width: 60ch;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 1.1rem;
 `
