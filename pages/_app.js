@@ -51,6 +51,7 @@ export default function App({ Component, pageProps }) {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" /> 
+          <link key="icon" rel="icon" type="image/png" href="/favicon.png" />
           <title>Prajot Surey</title>
         </Head>
         <Component {...pageProps} />

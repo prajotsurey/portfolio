@@ -23,7 +23,7 @@ export const SectionHeadingContainer = styled.div`
   flex-direction: row;
 `
 
-export const SectionHeadingSvgContainer = styled.h2`
+export const SectionHeadingSvgContainer = styled.div`
   margin-top: 5rem;
   height: 2rem;
   margin-left: 1rem;

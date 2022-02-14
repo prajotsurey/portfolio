@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ChibiTotoroAlternate from './ChibiTotoroAlternate'
+import Jiji from './Jiji'
 import { MainColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
@@ -46,7 +46,7 @@ const ContactSection = ({blok}) => {
             {blok.heading}
           </SectionHeading>
           <SectionHeadingSvgContainer>
-            <ChibiTotoroAlternate />
+            <Jiji />
           </SectionHeadingSvgContainer>
         </SectionHeadingContainer>
         <SubHeading className='fade-in'>
