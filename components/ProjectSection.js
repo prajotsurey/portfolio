@@ -46,7 +46,7 @@ const ProjectImage = styled.img`
 `
 
 const ProjectTitle = styled.h3`
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.6rem;
 `
 

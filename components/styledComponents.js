@@ -11,7 +11,7 @@ export const SectionContainer = styled.section`
 `
 
 export const SectionHeading = styled.h2`
-  font-weight: 200;
+  font-weight: 100;
   font-size: 2.5rem;
   margin-top: 5rem;
   margin-bottom: 8rem;
