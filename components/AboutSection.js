@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Birds from './Birds'
 import DustBunny from './DustBunny'
@@ -39,8 +39,106 @@ const SectionContentContainer = styled.div`
 
 const AboutSection = ({blok}) => {
   
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const birds = sectionRef.current.querySelectorAll('#birds path')
+    birds.forEach(bird => {
+      bird.style.strokeDasharray = bird.getTotalLength()
+      bird.style.strokeDashoffset = bird.getTotalLength()
+      bird.style.fillOpacity = '0'
+      bird.style.stroke = 'black'
+    })
+
+    const smallBirds = sectionRef.current.querySelectorAll('#smallBirds path')
+    smallBirds.forEach(bird => {
+      bird.style.strokeDasharray = bird.getTotalLength()
+      bird.style.strokeDashoffset = bird.getTotalLength()
+      bird.style.fillOpacity = '0'
+      bird.style.stroke = 'black'
+    })
+    
+    
+    const options = {
+      root:null,
+      threshold: 0,
+      rootMargin: '0px'
+    }
+
+    const strokeKeyframes = [{ strokeDashoffset: '0px', strokeDasharray: '0px' }]
+    const strokeTiming = {
+      fill: 'forwards',
+      easing: 'ease-in',
+      duration: 3000
+    }
+
+    const smallStrokeTiming = {
+      fill: 'forwards',
+      easing: 'ease-in',
+      duration: 2000
+    }
+
+    const fillKeyframes = [{ fillOpacity: '1' }]
+    const fillTiming = {
+      fill: 'forwards',
+      easing: 'ease-in',
+      delay: 2500,
+      duration: 1000,
+      composite: 'add'
+    }
+
+    const smallFillTiming = {
+      fill: 'forwards',
+      easing: 'ease-in',
+      delay: 1500,
+      duration: 500,
+      composite: 'add'
+    }
+
+
+    const birdObserver = new IntersectionObserver(function(entries,observer) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          observer.unobserve(entry.target)
+          console.log('here')
+          birds.forEach(bird => {
+            bird.animate(
+              strokeKeyframes,
+              strokeTiming
+            )
+      
+            bird.animate(
+              fillKeyframes,
+              fillTiming
+            )
+          }
+          )
+
+          smallBirds.forEach(bird => {
+            bird.animate(
+              strokeKeyframes,
+              smallStrokeTiming
+            )
+      
+            bird.animate(
+              fillKeyframes,
+              smallFillTiming
+            )
+          }
+          )
+
+        }
+      })
+    },options)
+
+    const birdSvg = sectionRef.current.querySelector('#birds')
+    birdObserver.observe(birdSvg)
+    const smallBirdSvg = sectionRef.current.querySelector('#smallBirds')
+    birdObserver.observe(smallBirdSvg)
+  },[])
+
   return(
-    <AlternateColorSectionContainer>
+    <AlternateColorSectionContainer ref={sectionRef}>
       <SectionContainer>
         <SectionHeadingContainer>
           <SectionHeading id="about">
