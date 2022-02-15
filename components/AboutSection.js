@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ChibiTotoro from './ChibiTotoro'
+import DustBunny from './DustBunny'
 import { AlternateColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer ,SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
@@ -34,7 +34,7 @@ const AboutSection = ({blok}) => {
             {blok.heading}
           </SectionHeading>
           <SectionHeadingSvgContainer>
-            <ChibiTotoro />
+            <DustBunny />
           </SectionHeadingSvgContainer>
         </SectionHeadingContainer>
         <div>
