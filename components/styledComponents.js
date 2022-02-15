@@ -41,6 +41,6 @@ export const MainColorSectionContainer = styled.div`
 `
 
 export const AlternateColorSectionContainer = styled.div`
-  background: #373737;
+  background: #1B1B1B;
   color:white;
 `
