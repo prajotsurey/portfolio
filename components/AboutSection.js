@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Birds from './Birds'
 import DustBunny from './DustBunny'
+import SmallBirds from './SmallBirds'
 import { AlternateColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer ,SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
@@ -20,7 +22,18 @@ const AboutText = styled.div`
 `
 
 const AboutText2 = styled(AboutText)`
-  margin-bottom: 10rem;
+`
+
+const SectionContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-between;
+
+  @media(min-width:1000px) {
+    flex-direction: row;
+  }
+
 `
 
 
@@ -37,23 +50,27 @@ const AboutSection = ({blok}) => {
             <DustBunny />
           </SectionHeadingSvgContainer>
         </SectionHeadingContainer>
-        <div>
-          <SubHeading >
-            {blok.subHeading}
-          </SubHeading>
-          <AboutText className='fade-in'>
-            {blok.text}
-            <br/>
-            <br/>
-            {blok.text2}
-          </AboutText>
-          <SubHeading2 className='fade-in'>
-          MY SKILLSET
-          </SubHeading2>
-          <AboutText2 className='fade-in'>
-            {blok.skillSet}
-          </AboutText2>
-        </div>
+        <SectionContentContainer>
+          <SmallBirds />
+          <div>
+            <SubHeading >
+              {blok.subHeading}
+            </SubHeading>
+            <AboutText className='fade-in'>
+              {blok.text}
+              <br/>
+              <br/>
+              {blok.text2}
+            </AboutText>
+            <SubHeading2 className='fade-in'>
+              MY SKILLSET
+            </SubHeading2>
+            <AboutText2 className='fade-in'>
+              {blok.skillSet}
+            </AboutText2>
+          </div>
+          <Birds />
+        </SectionContentContainer>
       </SectionContainer>
     </AlternateColorSectionContainer>
   )

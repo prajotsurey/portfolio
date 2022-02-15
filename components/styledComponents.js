@@ -8,6 +8,8 @@ export const SectionContainer = styled.section`
   margin-left: auto;
   margin-right: auto;
   min-height: 700px;
+  padding-bottom:10rem;
+  box-sizing:border-box;
 `
 
 
@@ -15,7 +17,11 @@ export const SectionHeading = styled.h2`
   font-weight: 100;
   font-size: 2.5rem;
   margin-top: 5rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
+
+  @media(min-width:1000px) {
+    margin-bottom: 8rem;
+  }
 `
 
 export const SectionHeadingContainer = styled.div`
