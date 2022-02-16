@@ -5,7 +5,7 @@ import Totoro from './Totoro'
 const HeroContainer = styled.section`
   width: 80%;
   max-width: 1500px;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   display: flex;
   flex-direction: column-reverse;
   align-items:center;
