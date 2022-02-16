@@ -4,9 +4,9 @@ import styled from 'styled-components'
 const ChuAndChibiSvg = styled.svg`
   max-width: 300px;
   width: 40%;
-  margin-left: 2rem;
+  margin-left: 4rem;
   display: none;
-  margin-right: 2rem;
+  margin-right: 4rem;
   @media(min-width:1000px) {
     display:block;
   }
