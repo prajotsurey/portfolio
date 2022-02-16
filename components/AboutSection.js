@@ -82,7 +82,7 @@ const AboutSection = ({blok}) => {
     const fillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 2500,
+      delay: 3000,
       duration: 1000,
       composite: 'add'
     }
@@ -90,7 +90,7 @@ const AboutSection = ({blok}) => {
     const smallFillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 1500,
+      delay: 2000,
       duration: 500,
       composite: 'add'
     }
