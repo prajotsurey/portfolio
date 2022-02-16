@@ -67,24 +67,24 @@ const ContactSection = ({blok}) => {
       rootMargin: '0px'
     }
 
-    const strokeKeyframes = [{ strokeDashoffset: '0px', strokeDashArray: '0px' }]
+    const strokeKeyframes = [{ strokeDashoffset: '0px' }]
     const strokeTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      duration: 6000,
+      duration: 20000,
     }
 
     const smallStrokeTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      duration: 3000
+      duration: 5000
     }
 
     const fillKeyframes = [{ fillOpacity: '1' }]
     const fillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 2000,
+      delay: 4000,
       duration: 1000,
       composite: 'add'
     }
@@ -92,7 +92,7 @@ const ContactSection = ({blok}) => {
     const smallFillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 500,
+      delay: 1000,
       duration: 1000,
       composite: 'add'
     }
