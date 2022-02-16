@@ -39,6 +39,10 @@ const ContactLink = styled.a`
   }
 `
 
+const NoWrapSpan = styled.span`
+  white-space: nowrap
+`
+
 const ContactSection = ({blok}) => {
 
   const sectionRef = useRef(null)
@@ -154,7 +158,7 @@ const ContactSection = ({blok}) => {
           <SmallChuAndChibiTotoro />
           <div>
             <SubHeading className='fade-in'>
-              {blok.question}
+              INTERESTED IN WORKING <NoWrapSpan>TOGETHER ?</NoWrapSpan>
             </SubHeading>
             <EmailText className='fade-in'>
         send me an email at <BoldEmail href={`mailto:${blok.email.email}`} target="_blank">{blok.email.email}</BoldEmail>
