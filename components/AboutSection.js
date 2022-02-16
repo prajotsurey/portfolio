@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Birds from './Birds'
 import DustBunny from './DustBunny'
 import SmallBirds from './SmallBirds'
-import { AlternateColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer ,SectionHeadingSvgContainer } from './styledComponents'
+import { AlternateColorSectionContainer, SectionContentContainer, SectionContainer, SectionHeading, SectionHeadingContainer ,SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -23,19 +23,6 @@ const AboutText = styled.div`
 
 const AboutText2 = styled(AboutText)`
 `
-
-const SectionContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:space-between;
-
-  @media(min-width:1000px) {
-    flex-direction: row;
-  }
-
-`
-
 
 const AboutSection = ({blok}) => {
   

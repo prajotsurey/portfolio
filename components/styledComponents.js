@@ -44,3 +44,15 @@ export const AlternateColorSectionContainer = styled.div`
   background: #1B1B1B;
   color:white;
 `
+
+export const SectionContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-between;
+
+  @media(min-width:1000px) {
+    flex-direction: row;
+  }
+
+`

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import ChuAndChibiTotoro from './ChuAndChibiTotoro'
 import Jiji from './Jiji'
-import { MainColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
+import SmallChuAndChibiTotoro from './SmallChuAndChibiTotoro'
+import { MainColorSectionContainer, SectionContentContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
 
 const SubHeading = styled.h3`
   font-size: 2rem;
@@ -49,19 +51,25 @@ const ContactSection = ({blok}) => {
             <Jiji />
           </SectionHeadingSvgContainer>
         </SectionHeadingContainer>
-        <SubHeading className='fade-in'>
-          {blok.question}
-        </SubHeading>
-        <EmailText className='fade-in'>
+        <SectionContentContainer>
+          <SmallChuAndChibiTotoro />
+          <div>
+            <SubHeading className='fade-in'>
+              {blok.question}
+            </SubHeading>
+            <EmailText className='fade-in'>
         send me an email at <BoldEmail href={`mailto:${blok.email.email}`} target="_blank">{blok.email.email}</BoldEmail>
-        </EmailText>
-        <ContactLinkContainer className='fade-in'>
-          {blok.links.map(link => (
-            <ContactLink key={link._uid} href={link.url.url} target="_blank">
-              {link.displayText}
-            </ContactLink>
-          ))}
-        </ContactLinkContainer>
+            </EmailText>
+            <ContactLinkContainer className='fade-in'>
+              {blok.links.map(link => (
+                <ContactLink key={link._uid} href={link.url.url} target="_blank">
+                  {link.displayText}
+                </ContactLink>
+              ))}
+            </ContactLinkContainer>
+          </div>
+          <ChuAndChibiTotoro />
+        </SectionContentContainer>
       </SectionContainer>
     </MainColorSectionContainer>
   )
