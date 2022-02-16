@@ -69,7 +69,7 @@ const AboutSection = ({blok}) => {
     const strokeTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      duration: 3000
+      duration: 2000
     }
 
     const smallStrokeTiming = {
@@ -82,7 +82,7 @@ const AboutSection = ({blok}) => {
     const fillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 3000,
+      delay: 2000,
       duration: 1000,
       composite: 'add'
     }
