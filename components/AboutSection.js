@@ -63,7 +63,7 @@ const AboutSection = ({blok}) => {
     const smallStrokeTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      duration: 4000
+      duration: 2000
     }
 
     const fillKeyframes = [{ fillOpacity: '1' }]

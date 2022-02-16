@@ -84,7 +84,7 @@ const ContactSection = ({blok}) => {
     const fillTiming = {
       fill: 'forwards',
       easing: 'ease-in',
-      delay: 1000,
+      delay: 2000,
       duration: 1000,
       composite: 'add'
     }
@@ -93,7 +93,7 @@ const ContactSection = ({blok}) => {
       fill: 'forwards',
       easing: 'ease-in',
       delay: 500,
-      duration: 500,
+      duration: 1000,
       composite: 'add'
     }
 
