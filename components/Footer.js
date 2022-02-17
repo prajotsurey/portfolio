@@ -10,7 +10,7 @@ const FooterContainer = styled.footer`
   margin-left: auto;
   margin-right: auto;
   box-sizing:border-box;
-  padding:1rem 0 2rem 0;
+  padding:1rem 0 1rem 0;
   color:grey;
 `
 
@@ -33,6 +33,9 @@ const NormalSpan = styled.span`
   font-size: 1.3rem;
 `
 
+const FooterText = styled.div`
+  margin-top: 1rem;
+`
 
 const Footer = ({blok}) => {
   return(
@@ -42,8 +45,10 @@ const Footer = ({blok}) => {
           <FooterName>
           Prajot Surey <NormalSpan>Portfolio</NormalSpan>
           </FooterName>
-          {blok.footerText}<br />
-          {blok.footerText2}
+          <FooterText>
+            {blok.footerText}<br />
+            {blok.footerText2}
+          </FooterText>
         </FooterContent>
       </FooterContainer>
     </AlternateColorSectionContainer>
