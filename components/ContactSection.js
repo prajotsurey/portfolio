@@ -28,7 +28,7 @@ const ContactLinkContainer = styled.div`
 `
 
 const ContactLink = styled.a`
-  margin-right: 1.2rem;
+  margin-right: 2rem;
   font-size: 1.2rem;
   color: grey;
   text-decoration:none;
