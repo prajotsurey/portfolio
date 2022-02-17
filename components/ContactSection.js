@@ -25,14 +25,25 @@ const BoldEmail = styled.a`
 
 const ContactLinkContainer = styled.div`
   margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media(min-width:600px) {
+    justify-content:start;
+  }
 `
 
 const ContactLink = styled.a`
-  margin-right: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: grey;
   text-decoration:none;
   font-weight: 500;
+
+  @media(min-width:600px) {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+  }
 
   &:hover{
     text-decoration: underline;
@@ -43,10 +54,13 @@ const NoWrapSpan = styled.span`
   white-space: nowrap
 `
 
+const ContactContent = styled.div`
+
+`
+
 const ContactSection = ({blok}) => {
 
   const sectionRef = useRef(null)
-  console.log(blok.Resume)
   useEffect(() => {
     const totoros = sectionRef.current.querySelectorAll('#totoros path')
     totoros.forEach(totoro => {
@@ -155,7 +169,7 @@ const ContactSection = ({blok}) => {
         </SectionHeadingContainer>
         <SectionContentContainer>
           <SmallChuAndChibiTotoro />
-          <div>
+          <ContactContent>
             <SubHeading className='fade-in'>
               INTERESTED IN WORKING <NoWrapSpan>TOGETHER ?</NoWrapSpan>
             </SubHeading>
@@ -172,7 +186,7 @@ const ContactSection = ({blok}) => {
                 Resume 
               </ContactLink>
             </ContactLinkContainer>
-          </div>
+          </ContactContent>
           <ChuAndChibiTotoro />
         </SectionContentContainer>
       </SectionContainer>
