@@ -34,7 +34,7 @@ const NormalSpan = styled.span`
 `
 
 const FooterText = styled.div`
-  margin-top: 1rem;
+  margin-top: 3rem;
 `
 
 const Footer = ({blok}) => {
