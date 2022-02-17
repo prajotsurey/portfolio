@@ -4,7 +4,7 @@ import ContactSection from './ContactSection'
 import HeroLandingSection from './HeroLandingSection'
 import Page from './Page'
 import ProjectSection from './ProjectSection'
-
+import Footer from './Footer'
 
 // resolve Storyblok components to Next.js components
 const Components = {
@@ -12,7 +12,8 @@ const Components = {
   HeroLandingSection: HeroLandingSection,
   ProjectSection: ProjectSection,
   AboutSection: AboutSection,
-  ContactSection: ContactSection
+  ContactSection: ContactSection,
+  Footer: Footer
 }
  
 const DynamicComponent = ({ blok }) => {
