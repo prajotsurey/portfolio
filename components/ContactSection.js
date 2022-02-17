@@ -46,7 +46,7 @@ const NoWrapSpan = styled.span`
 const ContactSection = ({blok}) => {
 
   const sectionRef = useRef(null)
-
+  console.log(blok.Resume)
   useEffect(() => {
     const totoros = sectionRef.current.querySelectorAll('#totoros path')
     totoros.forEach(totoro => {
@@ -168,6 +168,9 @@ const ContactSection = ({blok}) => {
                   {link.displayText}
                 </ContactLink>
               ))}
+              <ContactLink href={blok.Resume.filename} target="_blank">
+                Resume 
+              </ContactLink>
             </ContactLinkContainer>
           </div>
           <ChuAndChibiTotoro />
