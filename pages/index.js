@@ -28,7 +28,6 @@ export default function Home(props) {
 
   return (
     <div>
-      <Header />
       <DynamicComponent blok={story.content} />
     </div>
   )

@@ -42,10 +42,11 @@ const NavLink = styled.a`
 `
 
 
-const Header = () => {
+const Header = ({blok}) => {
   return(
     <HeaderContainer>
       <Nav>
+        <NavLink href={blok.Resume.filename} target="_blank">Resume</NavLink>
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#contact">Contact</NavLink>
