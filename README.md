@@ -1,4 +1,4 @@
-# Portfolio Website built using NextJs, Styled-Components and Intersection Observers. It uses Stroyblok as the CMS. [WEBSITE](https://www.prajot.dev/)
+# Portfolio Website built using NextJs, Styled-Components and Intersection Observers. It uses Storyblok as the CMS. [WEBSITE](https://www.prajot.dev/)
 This project is the repository for my portfolio website.
 
 ## OVERVIEW
