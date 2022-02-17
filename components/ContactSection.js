@@ -55,7 +55,7 @@ const NoWrapSpan = styled.span`
 `
 
 const ContactContent = styled.div`
-
+  width:100%;
 `
 
 const ContactSection = ({blok}) => {
