@@ -19,7 +19,6 @@ const AboutText = styled.div`
   font-weight: 400;
   line-height: 1.7rem;
   font-size: 1.1rem;
-  letter-spacing: 0.03em;
 `
 
 const AboutText2 = styled(AboutText)`
