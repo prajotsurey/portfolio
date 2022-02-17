@@ -87,7 +87,6 @@ const AboutSection = ({blok}) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
           observer.unobserve(entry.target)
-          console.log('here')
           birds.forEach(bird => {
             bird.animate(
               strokeKeyframes,

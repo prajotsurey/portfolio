@@ -105,7 +105,6 @@ const ContactSection = ({blok}) => {
     const totorosObserver = new IntersectionObserver(function(entries,observer) {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          console.log('hasodhsoju')
           observer.unobserve(entry.target)
           totoros.forEach(totoro => {
             totoro.animate(
