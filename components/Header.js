@@ -27,13 +27,14 @@ const Nav = styled.nav`
 const NavLink = styled.a`
   display: block;
   margin-left: 0px;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 300;
   text-decoration: none;
   color:black;
   
   @media(min-width:600px) {
     margin-left: 3rem;
+    font-size: 1.4rem;
   }
 
   &:hover{
