@@ -30,7 +30,7 @@ const WelcomeSection = styled.div`
 `
 
 const WelcomeText = styled.h1`
-  width: 20ch;
+  width: auto;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
   font-size: calc(1.5rem + 1.5vw);
@@ -39,6 +39,10 @@ const WelcomeText = styled.h1`
 
   @media(min-width:1200px) {
     font-size: 4rem;
+  }
+
+  @media(min-width:378px) {
+    width: 20ch;
   }
 `
 
