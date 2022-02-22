@@ -54,6 +54,7 @@ export default function App({ Component, pageProps }) {
           <link key="icon" rel="icon" type="image/png" href="/32x32.png" sizes="32x32"/>
           <link key="icon" rel="icon" type="image/png" href="/192x192.png" sizes="192x192"/>
           <title>Prajot Surey</title>
+          <meta name="description" content="Prajot Surey's portfolio website. Prajot Surey is a web developer based in India." />
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

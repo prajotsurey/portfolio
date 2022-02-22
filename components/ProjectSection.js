@@ -30,6 +30,10 @@ const ProjectLink = styled.a`
   width:100%;
   overflow: hidden;
   position: relative;
+
+  & div div {
+    padding-top: 80% !important;
+  }
 `
 
 
@@ -38,6 +42,7 @@ const ProjectImage = styled(Image)`
   height: auto !important;
   min-height: auto !important;
   transition: transform 100ms ease-in;
+  margin: 0px !important;
 
   ${ProjectLink}:hover &{
     transform: scale(1.02);
@@ -131,7 +136,7 @@ const ProjectSection = ({blok}) => {
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>
               <ProjectLink href={project.content.websiteLink.url} target='_blank'>
-                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt={project.imageAltText}/>
+                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt="Project UI Screenshot"/>
               </ProjectLink>
               <ProjectTitle>
                 {project.content.title}          
