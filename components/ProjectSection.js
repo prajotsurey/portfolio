@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Storyblok from '../lib/storyblok'
 import { MainColorSectionContainer, SectionContainer, SectionHeading, SectionHeadingContainer, SectionHeadingSvgContainer } from './styledComponents'
 import ChibiTotoroAlternate from './ChibiTotoroAlternate'
+import Image from 'next/image'
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -29,13 +30,13 @@ const ProjectLink = styled.a`
   width:100%;
   overflow: hidden;
   position: relative;
-
 `
 
 
-const ProjectImage = styled.img`
-  width: 100%;
-  height: auto;
+const ProjectImage = styled(Image)`
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
   transition: transform 100ms ease-in;
 
   ${ProjectLink}:hover &{
@@ -130,7 +131,7 @@ const ProjectSection = ({blok}) => {
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>
               <ProjectLink href={project.content.websiteLink.url} target='_blank'>
-                <ProjectImage src={project.content.introImage.filename} />
+                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt={project.imageAltText}/>
               </ProjectLink>
               <ProjectTitle>
                 {project.content.title}          
