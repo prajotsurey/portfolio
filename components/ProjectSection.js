@@ -136,7 +136,7 @@ const ProjectSection = ({blok}) => {
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>
               <ProjectLink href={project.content.websiteLink.url} target='_blank'>
-                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt="Project UI Screenshot"/>
+                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt={project.content.imageAltText}/>
               </ProjectLink>
               <ProjectTitle>
                 {project.content.title}          
