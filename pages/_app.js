@@ -3,6 +3,50 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
+
+  @font-face {
+    font-family: 'Roboto';
+    src:url("/fonts/Roboto-Thin.ttf");
+    font-weight: 100;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src:url("/fonts/Roboto-Light.ttf");
+    font-weight: 300;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src:url("/fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src:url("/fonts/Roboto-Medium.ttf");
+    font-weight: 500;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src:url("/fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Merriweather Sans';
+    src:url("/fonts/MerriweatherSans-Regular.ttf");
+    font-weight: 400;
+    font-style: regular;
+  }
+  @font-face {
+    font-family: 'Merriweather Sans';
+    src:url("/fonts/MerriweatherSans-Light.ttf");
+    font-weight: 300;
+    font-style: regular;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -48,9 +92,6 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-          <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" /> 
           <link key="icon" rel="icon" type="image/png" href="/32x32.png" sizes="32x32"/>
           <link key="icon" rel="icon" type="image/png" href="/192x192.png" sizes="192x192"/>
           <title>Prajot Surey</title>
