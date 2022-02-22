@@ -13,7 +13,7 @@ const SubHeading2 = styled(SubHeading)`
   margin-top: 4rem;
 `
 
-const AboutText = styled.div`
+const AboutText = styled.p`
   font-family: 'Merriweather Sans', sans-serif;
   max-width: 60ch;
   font-weight: 300;
@@ -142,8 +142,8 @@ const AboutSection = ({blok}) => {
             </SubHeading>
             <AboutText className='fade-in'>
               {blok.text}
-              <br/>
-              <br/>
+            </AboutText>
+            <AboutText className='fade-in'>
               {blok.text2}
             </AboutText>
             <SubHeading2 className='fade-in'>

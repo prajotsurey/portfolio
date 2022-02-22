@@ -42,7 +42,7 @@ const WelcomeText = styled.h1`
   }
 `
 
-const WelcomeSubText = styled.div`
+const WelcomeSubText = styled.p`
   margin-top: 1rem;
   max-width:50ch;
   font-size: clamp(1rem, 0.9rem + 1vw, 1.3rem);
