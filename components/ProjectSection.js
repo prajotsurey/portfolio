@@ -25,7 +25,7 @@ const ProjectContainer = styled.div`
   justify-self: center;
   margin-bottom: 4rem;
 `
-const ProjectLink = styled.a`
+const ProjectLink = styled.div`
   display:block;
   width:100%;
   overflow: hidden;
@@ -88,40 +88,40 @@ const Link = styled.a`
 
 `
 
-const ProjectSection = ({blok}) => {
+const ProjectSection = ({ blok }) => {
   const [projects, setProjects] = useState([])
   const sectionRef = useRef(null)
   useEffect(async () => {
     const response = await Storyblok.get('cdn/stories/', {
       'starts_with': 'projects/'
-    })  
+    })
     setProjects(response.data.stories)
 
     const options = {
-      root:null,
+      root: null,
       threshold: 0,
       rootMargin: '0px'
     }
 
     const projects = sectionRef.current.querySelectorAll('.fade-in')
-    const projectObserver = new IntersectionObserver(function(entries,observer) {
+    const projectObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(entry => {
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
           entry.target.classList.add('appear')
           observer.unobserve(entry.target)
         }
       })
-    },options)
+    }, options)
 
 
     projects.forEach(project => {
       projectObserver.observe(project)
     })
-  },[])
-  
+  }, [])
+
   console.log(projects)
 
-  return(
+  return (
     <MainColorSectionContainer ref={sectionRef}>
       <SectionContainer>
         <SectionHeadingContainer>
@@ -135,11 +135,11 @@ const ProjectSection = ({blok}) => {
         <ProjectsContainer>
           {projects.map(project => (
             <ProjectContainer className='fade-in' key={project.content._uid}>
-              <ProjectLink href={project.content.websiteLink.url} target='_blank'>
-                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt={project.content.imageAltText}/>
+              <ProjectLink>
+                <ProjectImage src={project.content.introImage.filename} layout='responsive' width="" height="" alt={project.content.imageAltText} />
               </ProjectLink>
               <ProjectTitle>
-                {project.content.title}          
+                {project.content.title}
               </ProjectTitle>
               <ProjectIntro>
                 {project.content.intro}
@@ -149,9 +149,9 @@ const ProjectSection = ({blok}) => {
                   <Link key={link._uid} href={link.url.url} target="_blank" rel="noreferrer">
                     {link.displayText}
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.231 10.4026C14.6452 8.98837 17.8258 6.51203 14.6569 3.34316C11.488 0.174286 9.01165 3.35478 7.59743 4.769" strokeWidth="2"/>
-                      <path d="M4.769 7.59743C3.35479 9.01165 0.174255 11.488 3.34314 14.6569C6.51203 17.8257 8.98836 14.6452 10.4026 13.231" strokeWidth="2"/>
-                      <path d="M11.8284 6.17159L6.17158 11.8284" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M13.231 10.4026C14.6452 8.98837 17.8258 6.51203 14.6569 3.34316C11.488 0.174286 9.01165 3.35478 7.59743 4.769" strokeWidth="2" />
+                      <path d="M4.769 7.59743C3.35479 9.01165 0.174255 11.488 3.34314 14.6569C6.51203 17.8257 8.98836 14.6452 10.4026 13.231" strokeWidth="2" />
+                      <path d="M11.8284 6.17159L6.17158 11.8284" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                   </Link>
                 ))}
@@ -162,6 +162,6 @@ const ProjectSection = ({blok}) => {
       </SectionContainer>
     </MainColorSectionContainer>
   )
-} 
+}
 
 export default ProjectSection
